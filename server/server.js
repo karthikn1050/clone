@@ -17,7 +17,7 @@ const authJwt = require('./middleware/authJwt')
 var corsOptions = {
 	origin: "http://localhost:3000"
   };
-app.use(cors(corsOptions));
+app.use(cors());
 
 const dbs = require("./models");
 

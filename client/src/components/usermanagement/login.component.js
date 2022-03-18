@@ -87,9 +87,10 @@ export default class Login extends Component {
       return <Redirect to={"/new"} />;          // now you can redirect your desired route
     }
     return (
-      <div className="col-10">
-        <div className="" style={{width:"300px",marginLeft:"30%",marginTop:"5%"}}>
-          
+      <div className="col-10" style={{marginTop:"70px",marginLeft:"50px"}}>
+        <div className="" style={{width:"400px",marginLeft:"30%",marginTop:"8%",height:"380px",paddingTop:"20px",backgroundColor:"#f0f0f5",boxShadow:"0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"}}>
+          <img src="https://www.freeiconspng.com/uploads/user-login-icon-14.png" alt="hello" width="70px" height="60px" />
+          <h3 style={{paddingTop:"10px"}}>Login</h3>
 
           <Form
             onSubmit={this.handleLogin}
@@ -100,6 +101,7 @@ export default class Login extends Component {
             <div className="form-group">
               <label htmlFor="username">Username</label>
               <Input
+              style={{width:"200px",marginLeft:"100px"}}
                 type="text"
                 className="form-control"
                 name="username"
@@ -112,6 +114,7 @@ export default class Login extends Component {
             <div className="form-group">
               <label htmlFor="password">Password</label>
               <Input
+                    style={{width:"200px",marginLeft:"100px"}}
                 type="password"
                 className="form-control"
                 name="password"
@@ -121,15 +124,16 @@ export default class Login extends Component {
               />
             </div>
 
-            <div className="form-group">
+            <div className="form-group"  style={{marginBottom:"20px"}}>
               <button
+                    style={{width:"100px",marginLeft:"100px"}}
                 className="btn btn-primary btn-block"
                 disabled={this.state.loading}
               >
                 {this.state.loading && (
                   <span className="spinner-border spinner-border-sm"></span>
                 )}
-                <span>Login</span>
+                <span      >Login</span>
               </button>
             </div>
 

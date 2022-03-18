@@ -13,6 +13,9 @@ import Admin from './components/usermanagement/board-admin.component'
 import user from './components/usermanagement/board-user.component'
 import AuthService from "./services/auth.service";
 import EventBus from "./common/EventBus";
+import Header from './components/header/header'
+import Log from './components/usermanagement/log'
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -60,13 +63,13 @@ class App extends Component {
       <>
        <BrowserRouter>
        
-        
+       <Header />
         </BrowserRouter>
       <div className="App">
        
              <Router>
         <div className="wrapper">
-        
+       
           <SideBar  />
     
             <Route exact path="/home" component={Home} />
@@ -80,7 +83,7 @@ class App extends Component {
       {/*  <Route exact path="/login" component={Apps} /> */}
        <Route exact path="/admin" component={Admin} />
        <Route exact path="/user" component={user} />
-     
+       <Route exact path="/log" component={Log} />
        <PrivateRoute path="/new" component ={New} />
      
        

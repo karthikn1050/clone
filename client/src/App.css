@@ -32,8 +32,6 @@
 }
 .wrapper {
  
- 
-
   display: flex;
   align-items: stretch;
 }
@@ -42,6 +40,10 @@
   min-width: 250px;
   max-width: 250px;
   min-height: 100vh;
+  -moz-box-shadow:    -3px 0 5px 0 #555;
+  -webkit-box-shadow: -3px 0 5px 0 #555;
+  box-shadow:         -3px 0 5px 0 #555;
+
 }
 
 #sidebar.active {

@@ -249,7 +249,7 @@ class MultiCheckBox extends React.Component{
               <BoardUser />
               
               <div className="row">
-                <div className="col-2">
+                <div className="col-3">
                   <Login />
                 </div>
              
@@ -318,7 +318,7 @@ class MultiCheckBox extends React.Component{
       </label>
       
     </div>
-    <div class="form-row col-2">
+    <div class="form-row col-3">
                             <div class="col-md-12 text-center">
                             
                                 <button type="submit" class="btn btn-success" onClick={()=>this.submit() } style={{  marginTop: "60px" }}>Inference</button>
@@ -326,9 +326,9 @@ class MultiCheckBox extends React.Component{
                         
                             
                         </div>
-                        <div class="col-2">
+                        {/* <div class="col-2">
                           <Logout />
-                        </div>
+                        </div> */}
                 <div class="col-12">
                     <div class="row" >
                         <br /><br />

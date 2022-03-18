@@ -40,8 +40,8 @@ class SideBar extends React.Component {
     const {  showAdminBoard } = this.state;
 
     return (
-      <nav id="sidebar">
-        <div class="sidebar-header">
+      <nav id="sidebar" style={{backgroundColor:"#00394d",color:"white"}}>
+        <div class="sidebar-header" style={{backgroundColor:"#00394d"}}>
           <h3><a href="/">Dashboard</a></h3>
         </div>
             <BrowserRouter>
@@ -64,16 +64,44 @@ class SideBar extends React.Component {
         
           <li class="">
             <a
-              href="https://appstream2.ap-southeast-1.aws.amazon.com/authenticate?parameters=eyJ0eXBlIjoiRU5EX1VTRVIiLCJleHBpcmVzIjoiMTYzODI3MjkwNiIsImF3c0FjY291bnRJZCI6IjAzNjc2MTIyNDgwMiIsInVzZXJJZCI6ImRodmFuaSIsImNhdGFsb2dTb3VyY2UiOiJzdGFjay9EaHZhbmkzYXBwc3N0YWNrIiwiZmxlZXRSZWYiOiJmbGVldC8zYXBwc2ZsZWV0IiwiYXBwbGljYXRpb25JZCI6IiIsInVzZXJDb250ZXh0IjoiIiwibWF4VXNlckR1cmF0aW9uSW5TZWNzIjoiNTc2MDAifQ%3D%3D&signature=sEj5Gd2NJekIq3FqltwSwjlTnfSJu89kQ30okRW4eEs%3D"
+              href="https://appstream2.ap-southeast-1.aws.amazon.com/authenticate?parameters=eyJ0eXBlIjoiRU5EX1VTRVIiLCJleHBpcmVzIjoiMTY0ODE4MjYxMSIsImF3c0FjY291bnRJZCI6IjAzNjc2MTIyNDgwMiIsInVzZXJJZCI6IlJhZ2h1cGF0aHkiLCJjYXRhbG9nU291cmNlIjoic3RhY2svRGh2YW5pU3RhY2tzIiwiZmxlZXRSZWYiOiJmbGVldC9BcHBzZmxlZXQiLCJhcHBsaWNhdGlvbklkIjoiIiwidXNlckNvbnRleHQiOiIiLCJtYXhVc2VyRHVyYXRpb25JblNlY3MiOiI1NzYwMCJ9&signature=k4szUMPO0ezP6xGy%2Byz7FeSaeFbfnsq%2FZWpOJ17wwUQ%3D"
               data-toggle="collapse"
               aria-expanded="false"
               // target="_blank"
             >
-             Annotation
+             SimSonic
             </a>
             
           </li>
         </ul>
+        <ul class="list-unstyled components">
+        
+        <li class="">
+          <a
+            href="https://appstream2.ap-southeast-1.aws.amazon.com/authenticate?parameters=eyJ0eXBlIjoiRU5EX1VTRVIiLCJleHBpcmVzIjoiMTY0ODE4MjYxMSIsImF3c0FjY291bnRJZCI6IjAzNjc2MTIyNDgwMiIsInVzZXJJZCI6IlJhZ2h1cGF0aHkiLCJjYXRhbG9nU291cmNlIjoic3RhY2svRGh2YW5pU3RhY2tzIiwiZmxlZXRSZWYiOiJmbGVldC9BcHBzZmxlZXQiLCJhcHBsaWNhdGlvbklkIjoiIiwidXNlckNvbnRleHQiOiIiLCJtYXhVc2VyRHVyYXRpb25JblNlY3MiOiI1NzYwMCJ9&signature=k4szUMPO0ezP6xGy%2Byz7FeSaeFbfnsq%2FZWpOJ17wwUQ%3D"
+            data-toggle="collapse"
+            aria-expanded="false"
+            // target="_blank"
+          >
+          SimXRay
+          </a>
+          
+        </li>
+      </ul>
+      <ul class="list-unstyled components">
+        
+        <li class="">
+          <a
+            href="https://appstream2.ap-southeast-1.aws.amazon.com/authenticate?parameters=eyJ0eXBlIjoiRU5EX1VTRVIiLCJleHBpcmVzIjoiMTY0ODE4MjYxMSIsImF3c0FjY291bnRJZCI6IjAzNjc2MTIyNDgwMiIsInVzZXJJZCI6IlJhZ2h1cGF0aHkiLCJjYXRhbG9nU291cmNlIjoic3RhY2svRGh2YW5pU3RhY2tzIiwiZmxlZXRSZWYiOiJmbGVldC9BcHBzZmxlZXQiLCJhcHBsaWNhdGlvbklkIjoiIiwidXNlckNvbnRleHQiOiIiLCJtYXhVc2VyRHVyYXRpb25JblNlY3MiOiI1NzYwMCJ9&signature=k4szUMPO0ezP6xGy%2Byz7FeSaeFbfnsq%2FZWpOJ17wwUQ%3D"
+            data-toggle="collapse"
+            aria-expanded="false"
+            // target="_blank"
+          >
+         Dhvani GTNote
+          </a>
+          
+        </li>
+      </ul>
         {showAdminBoard && (
         <ul class="list-unstyled components">
         
