@@ -158,7 +158,7 @@ class MultiCheckBox extends React.Component{
       
        };
 
-      axios.post('http://ec2-52-77-238-212.ap-southeast-1.compute.amazonaws.com:8000/home', article)
+      axios.post('http://localhost:5000/home', article)
         .then(response => this.setState({  confclass: response.data,
            loading: false,
         
@@ -181,7 +181,7 @@ class MultiCheckBox extends React.Component{
           id:"7"
                };
   
-        axios.post('http://ec2-13-213-49-67.ap-southeast-1.compute.amazonaws.com:3000/home', article)
+        axios.post('http://localhost:5000/home', article)
           .then(response => this.setState({ confobj:response.data,
              loading: false,
           
@@ -206,7 +206,7 @@ class MultiCheckBox extends React.Component{
           id:"8"
                };
   
-        axios.post('http://ec2-13-213-49-67.ap-southeast-1.compute.amazonaws.com:3000/home', article)
+        axios.post('http://localhost:5000/home', article)
           .then(response => this.setState({ segpoints:response.data,
              loading: false,
           
@@ -415,11 +415,11 @@ class MultiCheckBox extends React.Component{
            <g>
              <rect  x={object.bbox[0]} y={object.bbox[1]}  width={object.bbox[2] - object.bbox[0]} height={object.bbox[3] - object.bbox[1]}
            style={{stroke:"red",}} fill-opacity="0.0" />
-           <text x={object.bbox[0]} y={object.bbox[1]} font-family="Verdana" font-size="35" fill="red">{object.class}</text>
+           <text x={object.bbox[0]} y={object.bbox[1]} font-family="Verdana" font-size="35" fill="red">{object.class_label}</text>
            </g>
              Sorry, your browser does not support inline SVG.  
                 </svg> 
-                <h3>Confidence:{object.confidence}</h3>
+                <h3>Confidence:{object.pred_score}</h3>
 
 
 </div>
@@ -457,7 +457,7 @@ class MultiCheckBox extends React.Component{
     style={{height:"512px" ,width:"512px",fill:"red",stroke:"white",opacity:".5"
 }}/></svg>
 
-<h3>Threshold:{segmentation.confidence}</h3>
+<h3>Threshold:{segmentation.pred_score}</h3>
 </div>
           ))}
 
