@@ -26,12 +26,12 @@ export default class User extends React.Component {
         showAdminBoard: user.roles.includes("ROLE_ADMIN"),
       });
     }
-    axios.get('http://localhost:5000/userlist')
+    axios.get('http://localhost:5001/userlist')
         .then(response => this.setState({ userlist: response.data }));
    
   }
   deleteRow(id, e){
-    axios.delete(`http://localhost:5000/delete/${id}`)
+    axios.delete(`http://localhost:5001/delete/${id}`)
       .then(res => {
         console.log(res);
         console.log(res.data);

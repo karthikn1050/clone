@@ -218,7 +218,7 @@ if ( process.env.NODE_ENV === 'production' ) {
 		console.log(req.signedCookies.name)
 		console.log(req.body.Username)
 		//console.log(req.headers)
-		console.log(req.body.login)
+		console.log(req.body)
 		
 		
 	
@@ -323,6 +323,6 @@ if ( process.env.NODE_ENV === 'production' ) {
 
 
 // Set up a port
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5001;
 
 app.listen( port, () => console.log( `Server running on port: ${port}` ) );

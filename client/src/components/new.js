@@ -128,7 +128,7 @@ class MultiCheckBox extends React.Component{
     /* axios.get('http://localhost:5000/files')
     .then(response => this.setState({ courses: response.data })); */
     if (user) {
-     axios.post('http://localhost:5000/files',{
+     axios.post('http://localhost:5001/files',{
      
       Username:user.username
       
@@ -158,7 +158,19 @@ class MultiCheckBox extends React.Component{
       
        };
 
-      axios.post('http://localhost:5000/home', article)
+      axios.post('http://localhost:5000/home', {
+        body:JSON.stringify({ 
+
+      model_details :[ 
+        {
+          model_name: "dhvani_rcnn",
+          dataset:this.state.course,
+          input_path:this.state.checkbox,
+          }
+        ]
+        })
+      
+      })
         .then(response => this.setState({  confclass: response.data,
            loading: false,
         
@@ -181,7 +193,21 @@ class MultiCheckBox extends React.Component{
           id:"7"
                };
   
-        axios.post('http://localhost:5000/home', article)
+        axios.post('http://localhost:5000/home', 
+          {
+            body:JSON.stringify({ 
+
+          model_details :[ 
+            {
+              model_name: "dhvani_rcnn",
+              dataset:this.state.course,
+              input_path:this.state.checkbox,
+              }
+            ]
+            })
+          
+          }
+        )
           .then(response => this.setState({ confobj:response.data,
              loading: false,
           
@@ -206,7 +232,19 @@ class MultiCheckBox extends React.Component{
           id:"8"
                };
   
-        axios.post('http://localhost:5000/home', article)
+        axios.post('http://localhost:5000/home', {
+          body:JSON.stringify({ 
+
+        model_details :[ 
+          {
+            model_name: "dhvani_rcnn",
+            dataset:this.state.course,
+            input_path:this.state.checkbox,
+            }
+          ]
+          })
+        
+        })
           .then(response => this.setState({ segpoints:response.data,
              loading: false,
           

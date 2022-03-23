@@ -64,7 +64,7 @@ class SideBar extends React.Component {
         
           <li class="">
             <a
-              href="https://appstream2.ap-southeast-1.aws.amazon.com/authenticate?parameters=eyJ0eXBlIjoiRU5EX1VTRVIiLCJleHBpcmVzIjoiMTY0ODE4MjYxMSIsImF3c0FjY291bnRJZCI6IjAzNjc2MTIyNDgwMiIsInVzZXJJZCI6IlJhZ2h1cGF0aHkiLCJjYXRhbG9nU291cmNlIjoic3RhY2svRGh2YW5pU3RhY2tzIiwiZmxlZXRSZWYiOiJmbGVldC9BcHBzZmxlZXQiLCJhcHBsaWNhdGlvbklkIjoiIiwidXNlckNvbnRleHQiOiIiLCJtYXhVc2VyRHVyYXRpb25JblNlY3MiOiI1NzYwMCJ9&signature=k4szUMPO0ezP6xGy%2Byz7FeSaeFbfnsq%2FZWpOJ17wwUQ%3D"
+              href="https://appstream2.ap-southeast-1.aws.amazon.com/authenticate?parameters=eyJ0eXBlIjoiRU5EX1VTRVIiLCJleHBpcmVzIjoiMTY0ODIxODAyNyIsImF3c0FjY291bnRJZCI6IjAzNjc2MTIyNDgwMiIsInVzZXJJZCI6IlJhZ2h1IiwiY2F0YWxvZ1NvdXJjZSI6InN0YWNrL1NpbXhyYXlTdGFjayIsImZsZWV0UmVmIjoiZmxlZXQvU2lteHJheWZsZWV0IiwiYXBwbGljYXRpb25JZCI6IiIsInVzZXJDb250ZXh0IjoiIiwibWF4VXNlckR1cmF0aW9uSW5TZWNzIjoiNTc2MDAifQ%3D%3D&signature=%2B68ZUuurARJn789Z9He6W6HYRrTF69vlyu0Jd8ILodM%3D"
               data-toggle="collapse"
               aria-expanded="false"
               // target="_blank"
@@ -92,7 +92,7 @@ class SideBar extends React.Component {
         
         <li class="">
           <a
-            href="https://appstream2.ap-southeast-1.aws.amazon.com/authenticate?parameters=eyJ0eXBlIjoiRU5EX1VTRVIiLCJleHBpcmVzIjoiMTY0ODE4MjYxMSIsImF3c0FjY291bnRJZCI6IjAzNjc2MTIyNDgwMiIsInVzZXJJZCI6IlJhZ2h1cGF0aHkiLCJjYXRhbG9nU291cmNlIjoic3RhY2svRGh2YW5pU3RhY2tzIiwiZmxlZXRSZWYiOiJmbGVldC9BcHBzZmxlZXQiLCJhcHBsaWNhdGlvbklkIjoiIiwidXNlckNvbnRleHQiOiIiLCJtYXhVc2VyRHVyYXRpb25JblNlY3MiOiI1NzYwMCJ9&signature=k4szUMPO0ezP6xGy%2Byz7FeSaeFbfnsq%2FZWpOJ17wwUQ%3D"
+            href="https://appstream2.ap-southeast-1.aws.amazon.com/authenticate?parameters=eyJ0eXBlIjoiRU5EX1VTRVIiLCJleHBpcmVzIjoiMTY0ODIxOTQxMSIsImF3c0FjY291bnRJZCI6IjAzNjc2MTIyNDgwMiIsInVzZXJJZCI6IlJhZ2h1cGF0aHkiLCJjYXRhbG9nU291cmNlIjoic3RhY2svR1ROb3RlU3RhY2siLCJmbGVldFJlZiI6ImZsZWV0L0RodmFuaUdUTm90ZWZsZWV0IiwiYXBwbGljYXRpb25JZCI6IiIsInVzZXJDb250ZXh0IjoiIiwibWF4VXNlckR1cmF0aW9uSW5TZWNzIjoiNTc2MDAifQ%3D%3D&signature=fsz6%2F2PSQtLPdLwRiYJiJKfg6%2Fx82CTNCQymlbbskhY%3D"
             data-toggle="collapse"
             aria-expanded="false"
             // target="_blank"
