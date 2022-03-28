@@ -15,7 +15,6 @@ import {
 
 } from "react-image-magnifiers";
 import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
 const responsive = {
   superLargeDesktop: {
     breakpoint: { max: 4000, min: 3000 },
@@ -498,20 +497,17 @@ const obj = Object.values(flatMap);
           </Modal.Header>
           <Modal.Body>
           <div  >{this.state.loading ? <div class="loader"><i style={{ marginLeft: "43%",marginTop:"30%" }}>Please Wait Loading...</i></div> : null}</div>
-          
-   <Carousel responsive={responsive} autoPlay={false}  autoPlaySpeed={90000} swipeable={false}
+          <Carousel responsive={responsive} autoPlay={false}  autoPlaySpeed={90000} swipeable={false}
           transitionDuration={500}
   draggable={false}> 
-                {confobj.map((object) => (
-                
-                  <div class="img-overlay-wrap"style={{ marginLeft: "27%" }}>
-    
+          {confobj.map(object => (  
+         
+      <div style={{marginLeft:"27%",matginBottom:"20px"}}>
+         <Magnifier zoomFactor='2' src={`data:image/jpg;base64,${object.data}`} width={512} height={512}  />
+         </div>
 
-     <Magnifier zoomFactor='2' src={`data:image/jpg;base64,${object.data}`} width={512} height={512}  />
-      </div>
-                ))}
- 
- </Carousel>  
+          ))}
+</Carousel>
 		  </Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={this.closeModals}>

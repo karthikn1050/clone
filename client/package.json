@@ -26,6 +26,7 @@
     "react-iframe": "^1.8.0",
     "react-konva": "^17.0.2-5",
     "react-loading-overlay": "^1.0.1",
+    "react-map-interaction": "^2.1.0",
     "react-native": "^0.66.1",
     "react-pro-sidebar": "^0.7.1",
     "react-redux": "^5.0.7",

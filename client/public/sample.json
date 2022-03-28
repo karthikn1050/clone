@@ -1,0 +1,67 @@
+[
+	[{
+			"name": "https://dhvanibmw.s3.ap-southeast-1.amazonaws.com/IMG00177.png",
+			"class": "Pore",
+			"confidence": "0.9",
+			"bbox": [160.0, 916.0, 169.0, 925.0],
+			"segmentation": []
+		},
+		{
+			"name": "https://dhvanibmw.s3.ap-southeast-1.amazonaws.com/IMG00177.png",
+			"class": "Pore",
+			"confidence": "0.81",
+			"bbox": [107.0, 890.0, 112.0, 896.0],
+			"segmentation": []
+		},
+		{
+			"name": "https://dhvanibmw.s3.ap-southeast-1.amazonaws.com/IMG00177.png",
+			"class": "Pore",
+			"confidence": "0.57",
+			"bbox": [119.0, 871.0, 123.0, 873.0],
+			"segmentation": []
+		},
+		{
+			"name": "https://dhvanibmw.s3.ap-southeast-1.amazonaws.com/IMG00177.png",
+			"class": "Pore",
+			"confidence": "0.63",
+			"bbox": [343.0, 703.0, 346.0, 705.0],
+			"segmentation": []
+		},
+		{
+			"name": "https://dhvanibmw.s3.ap-southeast-1.amazonaws.com/IMG00177.png",
+			"class": "Pore",
+			"confidence": "0.9",
+			"bbox": [337.0, 692.0, 345.0, 701.0],
+			"segmentation": []
+		}
+	],
+	[{
+			"name": "https://dhvanibmw.s3.ap-southeast-1.amazonaws.com/IMG00178.png",
+			"class": "Pore",
+			"confidence": "0.53",
+			"bbox": [1183.0, 1078.0, 1185.0, 1081.0],
+			"segmentation": []
+		},
+		{
+			"name": "https://dhvanibmw.s3.ap-southeast-1.amazonaws.com/IMG00178.png",
+			"class": "Pore",
+			"confidence": "0.83",
+			"bbox": [155.0, 1002.0, 161.0, 1008.0],
+			"segmentation": []
+		},
+		{
+			"name": "https://dhvanibmw.s3.ap-southeast-1.amazonaws.com/IMG00178.png",
+			"class": "Pore",
+			"confidence": "0.72",
+			"bbox": [107.0, 891.0, 111.0, 893.0],
+			"segmentation": []
+		},
+		{
+			"name": "https://dhvanibmw.s3.ap-southeast-1.amazonaws.com/IMG00178.png",
+			"class": "Pore",
+			"confidence": "0.77",
+			"bbox": [121.0, 871.0, 126.0, 873.0],
+			"segmentation": []
+		}
+	]
+]
