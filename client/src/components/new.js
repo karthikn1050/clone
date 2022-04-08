@@ -9,11 +9,7 @@ import AuthService from '../services/auth.service';
 import BoardUser from './usermanagement/board-user.component';
 import { MapInteractionCSS } from 'react-map-interaction';
 import Magnifier from "react-magnifier";
-import {
 
-  GlassMagnifier,
-
-} from "react-image-magnifiers";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 const responsive = {
@@ -220,7 +216,7 @@ class MultiCheckBox extends React.Component{
           id:"7"
                };
   
-        axios.post('http://localhost:5000/home', 
+        axios.post('http://ec2-13-250-104-200.ap-southeast-1.compute.amazonaws.com:3000/home', 
           {
             body:JSON.stringify({
               model_details:[{ 

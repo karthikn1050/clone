@@ -20,9 +20,11 @@ var corsOptions = {
 app.use(cors());
 
 const dbs = require("./models");
-
+const AppstreamDB =dbs.appstream
+const Role = dbs.role;
 dbs.sequelize.sync({ force: false }).then(() => {
 	console.log("Drop and re-sync db.");
+	//initial();
   }).catch((err) => {
 	console.log('Unable to connect to the database:', err);
 });
@@ -140,7 +142,24 @@ if ( process.env.NODE_ENV === 'production' ) {
 			res.send(results);
 		})
 	})
-
+	app.get('/getappstreamuser',(req,res)=>{
+		let sql ="select * from new_schema.appstreams"
+	 db.query(sql, (err,results) =>{
+			if(err){
+				throw err
+			}
+			 console.log(results)
+			res.send(results);
+		})
+	})
+	app.post('/createappstreamuser',(req,res)=>{
+		const appname = (req.body.appname).toString()
+		AppstreamDB.create({
+			username:req.body.username,
+			AppName:appname
+		}).then(response => console.log(response)).catch(err => console.log(err))
+		res.send("Appstream User Created")
+	})
 	app.get('/model', (req,res)=>{
 		let model = req.body.model;
 	 let sql ="select * from new_schema.model_list,new_schema.images where model_name=  " + mysql.escape(model)
@@ -284,7 +303,27 @@ if ( process.env.NODE_ENV === 'production' ) {
 		  }); */
 		  
 	})
+	app.delete('/del/:id', (req,res)=>{
+		const username = req.params.id
+		console.log(req.body)
+		var appstream = new aws.AppStream({apiVersion: '2016-12-01'});
+	
+	
+		const params = {
+			AuthenticationType:"USERPOOL",
+			UserName:username
+		 }
+		
+			//const associateFleetCommand = new AssociateFleetCommand(body);
+			 appstream.deleteUser(params,  function(err, data) {
+				if (err) console.log(err, err.stack); // an error occurred
+				else   {  console.log("successful",data);   
+				res.send("User Deleted Successfully")        // successful response
+			 } 
+			})
+	})
 	app.post('/stack', (req, res) => {
+		console.log(req.body)
 		var appstream = new aws.AppStream({apiVersion: '2016-12-01'});
 		var paramss = {
 			UserStackAssociations: [ 
@@ -297,12 +336,13 @@ if ( process.env.NODE_ENV === 'production' ) {
 			
 			]
 		  };
+		  
 		  appstream.batchAssociateUserStack(paramss, function(err, data) {
 			if (err) console.log(err, err.stack); // an error occurred
 			else     console.log("success");           // successful response
 		  });
 		 
-		 res.send("successful")
+		 res.send("Apps Assigned Successfully")
 	})
 
 	app.delete('/delete/:id',(req,res)=>{
@@ -316,10 +356,38 @@ if ( process.env.NODE_ENV === 'production' ) {
 	  })
 	  })
 
+	app.delete('/appdelete/:id',(req,res)=>{
+		const id= req.params.id
+		db.query("DELETE FROM appstreams WHERE username =?",id,(err,results) => {
+		  if(err){
+			  throw err
+		  }
+		  
+		  res.send(results);
+	  })
+	  })
+
 	//User Management Starts Here
 	
 
 	//User Management Ends Here
+
+	function initial() {
+		Role.create({
+		  id: 1,
+		  name: "user"
+		});
+	   
+		Role.create({
+		  id: 2,
+		  name: "moderator"
+		});
+	   
+		Role.create({
+		  id: 3,
+		  name: "admin"
+		});
+	  }
 
 
 // Set up a port

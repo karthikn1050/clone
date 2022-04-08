@@ -38,6 +38,7 @@ class SideBar extends React.Component {
 
   render = () => {
     const {  showAdminBoard } = this.state;
+    const {currentUser} = this.state
 
     return (
       <nav id="sidebar" style={{backgroundColor:"#00394d",color:"white"}}>
